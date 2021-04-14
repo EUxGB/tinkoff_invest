@@ -1,0 +1,6 @@
+[2021-03-09 21:56:18.203] [SEVERE ] ru.tinkoff.invest.openapi.example.App main 
+Не удалось извлечь торговые параметры.
+java.lang.IllegalArgumentException: Не передан авторизационный токен!
+	at ru.tinkoff.invest.openapi.example.App.extractParams(App.java:126)
+	at ru.tinkoff.invest.openapi.example.App.main(App.java:32)
+
