@@ -24,11 +24,7 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes>
-      <connection connection-id="a044f13b-3702-404b-9039-8c4128ff3a75">
-        <schema name="tinkoff_invest" object-types="view, function, table, procedure" />
-      </connection>
-    </loaded-nodes>
+    <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="a044f13b-3702-404b-9039-8c4128ff3a75">

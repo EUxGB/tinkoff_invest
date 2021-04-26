@@ -20,7 +20,7 @@ public class Comutator extends Thread {
 
 
             String myFigi = "BBG002BHBHM1"; //MNK
-            List blackListShares = BlackListShares.getBlackListShares(true, true, false, false, false);
+            List blackListShares = BlackListShares.getBlackListShares(false, false, false, false, false);
 //        Bot bot = new Bot();  // запуск телеграм бота
 
             //ApiTinkoff.writeFileAllFigiCandles("notes3.txt",LocalDateTime.now().minusMonths(1), DAY);
@@ -30,11 +30,11 @@ public class Comutator extends Thread {
 
             //************************
             boolean killAllShares = false;                  // Удалить все данные из таблицы
-            boolean sharesUpdate = false;                   // Добавить figi если они отсутсвуют в таблице "allshares"
-            boolean killBlackShares = false;                // Удалить из базы тикеры для уменьшения количества записей в ней и ускорения обработки всех строк
+            boolean sharesUpdate = true;                   // Добавить figi если они отсутсвуют в таблице "allshares"
+            boolean killBlackShares = true;                // Удалить из базы тикеры для уменьшения количества записей в ней и ускорения обработки всех строк
             boolean sharesAVRUpdaterPV = false;             // Добавляет в базу средний объем и среднюю цену за месяц
-            boolean sharesAVRUpdaterOneDayV = false;        // Добавляет в базу средний объем за сутки
-            boolean FastScanerCandles = true;               // Сканирование всех акций 120шт./мин быстрое изменение объема
+            boolean sharesAVRUpdaterOneDayV = true;        // Добавляет в базу средний объем за сутки
+            boolean FastScanerCandles = false;               // Сканирование всех акций 120шт./мин быстрое изменение объема
             boolean updateEMA = false;
 
 
@@ -74,7 +74,7 @@ public class Comutator extends Thread {
                     System.out.println("Объем из Телеграм установлен: " + Bot.getExternal_data_volume());
                     shares.setAvVolume(Bot.getExternal_data_volume());  //запрос объема по которому будет выводится сообщение в телеграм
                     shares.setSetupProcent(Bot.getExternal_data_procent());  //запрос объема по которому будет выводится сообщение в телеграм
-                    shares.update5MinProcentV(120, 60, 10, 100);  // средний объем за последние 5 свечей (обновляем постоянно) procentAvrV
+                    shares.update5MinProcentV(120, 60, 20, 100);  // средний объем за последние 5 свечей (обновляем постоянно) procentAvrV
                     Thread.sleep(20 * 1000);
                 }
             }

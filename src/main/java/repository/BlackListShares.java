@@ -4015,9 +4015,10 @@ public class BlackListShares {
 
     public static String[] getBlackArrayDailyShares() {
         String[] blackListDaily = {
-                "CIEN",
-                "DLR",
-                "BHF"
+                "IPHI",
+//                "CIEN",
+//                "DLR",
+//                "BHF"
         };
         return blackListDaily;
     }

@@ -15,10 +15,10 @@ public class DateTest {
     public static void main(String[] args) throws InterruptedException {
         OpenApi api = ApiTinkoff.initApi(true);
         List<Candle> list = new ArrayList();
-         list =ApiTinkoff.getCandles("BBG000C496P7", LocalDateTime.now().minusDays(1), CandleInterval.ONE_MIN);
+         list =ApiTinkoff.getCandles("BBG000R23VW8", LocalDateTime.now().minusDays(1), CandleInterval.ONE_MIN);
         List listtime = new ArrayList();
 
-        list.stream().skip(53).forEach(element -> {
+        list.stream().forEach(element -> {
             listtime.add(element.time);
 //            System.out.println(element.time.getClass());
 
